@@ -1,0 +1,9 @@
+# Lambda-and-stream-expressions---Java
+
+Consider the task of analyzing the behavior of a person recorded by a set of sensors. The historical log of the person’s activity is stored as tuples (start_time, end_time, activity_label), where start_time and end_time represent the date and time when each activity has started and ended while the activity label represents the type of activity performed by the person: Leaving, Toileting, Showering, Sleeping, Breakfast, Lunch, Dinner, Snack, Spare_Time/TV, Grooming. The data is spread over several days as many entries in the log Activities.txt, taken from [1,2] and downloadable from the file Activities.txt located in this folder.
+
+To make this application possible we created a package that contains two classes: Main and MonitoredData.
+In the MonitoredData class I made an empty constructor and a constructor with parameters like DateTime, DateTime and String. Also here we did the get and set methods for the globally declared variables. I also generated the toString () method. I imported the following: import java.util.ArrayList; import java.util.List; import org.joda.time.DateTime; and in order to be able to use data time I imported the joda time library.
+In the Main class I read the data from the Activities.txt file, and in order to be able to separate the columns I used split. I converted the read strings from the first two columns to date time, I also read the last string column, I created a MonitoredData object with them, and then I added it to a <MonitoredData> list.
+I determined a map of type Map <String, Long> where I added the actions from the list of type <MonitoredData> only once, and next to them I wrote how many times they appear in the file. Then I wrote them in the NumberOfActivities file. txt.
+I counted the distinct days that appear in the monitored Data list.
